@@ -1,0 +1,2 @@
+6.0以下动态权限的问题 已记录在csdn上
+https://blog.csdn.net/lixiaolu1994/article/details/83995218
