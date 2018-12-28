@@ -1,2 +1,40 @@
-6.0���¶�̬Ȩ�޵����� �Ѽ�¼��csdn��
+﻿6.0以下动态权限的问题 已记录在csdn上，主要是关于6.0以下权限申请也会弹出框让用户选择的解决办法，地址如下
 https://blog.csdn.net/lixiaolu1994/article/details/83995218
+
+4.4 cardview 问题  无法填充满 会有边距  高版本正常 
+
+Vue js 与Android webView交互的时候 有的方法会导致webview崩溃 但是没有具体的崩溃日志不属于exception  as无法捕捉这个异常  最后查证原因应该是在vue js调用原生方法时有的api导致webview 内核产生了崩溃 所以加载webview的页面会直接finish   以上都是瞎几把猜的   正确答案是 坑爹前端 偷偷调了我一个本地的 finish方法 ~~~~
+
+放大点击事件的热区的几种办法
+
+Google Play 上架被拒  提示原因  SSL Error HandlerFor more information on how to address WebView SSL Error Handler alerts, please see this Google Help Center article.   解决方法  ： 在webView.setWebViewClient  加上 onReceivedSslError回调 处理一下ssl证书验证的回调  Google Play的审核比较严格   但修改完之后 提交了3次  都是拒绝  那么问题出在哪了呢   别急  等5个小时之后再提交 因为重复提交  google那边没看到最新的  依旧回给你打回
+
+一条TextView 中间有一个文字字体颜色都和其他不同 那么怎么样才可以实现  常见的很多人可能用不同textview布局实现 现在有种最优实现方式就是使用html 实现 在html 中标签写好字体颜色 最后转换为String字符串即可
+
+今天早上启动 Android Studio，不停的Indexing。不是那种一次很久的，而是频繁重复，一秒几次的那种。
+File > Invalidate Caches/Restart
+https://blog.csdn.net/quantum7/article/details/79907889
+
+svn 分支主干一直merge 失败的原因   因为分支是从另一个分支拉下来的  不是从主干拉下来的 所以一直合并失败 要想合并成功 必须分支要从主干拉下来
+
+一行textview显示不同颜色的字体并相应不同的点击事件用SpannableStringBuilder 可以实现  有工具类
+
+ Intent intent = getIntent();
+        if (intent != null) {
+            mSendRegisterOTp = (SendRegisterOTp) intent.getSerializableExtra(SignInFragment.SENDREGISTEROTP);
+            startCountDownTime(mSendRegisterOTp.getLastSendTime());
+            mMobilePhone = intent.getStringExtra(SignInFragment.MOBILEPHONE);
+            phoneText.setText("+" + mMobilePhone);
+        }
+
+ Intent intent = getIntent();
+        if (intent != null) {
+            mSendRegisterOTp = (SendRegisterOTp) intent.getSerializableExtra(SignInFragment.SENDREGISTEROTP);
+            mMobilePhone = intent.getStringExtra(SignInFragment.MOBILEPHONE);
+            startCountDownTime(mSendRegisterOTp.getLastSendTime());
+            phoneText.setText("+" + mMobilePhone);
+        }
+这两段代码有什么区别 可能我真不知道  但运行结果就是第二段代码的settext方法无效    startCountDownTime方法也不会执行  你问为什么 我也不知道
+
+国际化处理，跟谁系统语言做变更 ，系统选啥  一些主要模块的语言就显示啥
+
